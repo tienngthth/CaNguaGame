@@ -1,0 +1,40 @@
+
+
+Version:	3.12
+CmdLine:	C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\CaNguaGame.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\.
+Java min ver:	1.006.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\11.0.2
+Check launcher:	C:\Program Files\Java\jdk-11.0.2\bin\javaw.exe (OK)
+Match:		1.011.000_002
+Runtime used:	1.011.000_002 (64-bit)
+Heap -Xms:	Requested 420 MB / 0%, Available: 5036 MB, Heap size: 420 MB
+Heap -Xmx:	Requested 900 MB / 0%, Available: 5036 MB, Heap size: 900 MB
+Launcher:	C:\Program Files\Java\jdk-11.0.2\bin\javaw.exe
+Launcher args:	-Xms420m -Xmx900m --module-path C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\javafx\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -jar "C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\CaNguaGame.exe"
+Args length:	265/32768 chars
+Exit code:	0
+
+
+Version:	3.12
+CmdLine:	C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\CaNguaGame.exe --l4j-debug
+WOW64:		yes
+Working dir:	C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\.
+Java min ver:	1.006.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\11.0.2
+Check launcher:	C:\Program Files\Java\jdk-11.0.2\bin\javaw.exe (OK)
+Match:		1.011.000_002
+Runtime used:	1.011.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-11.0.2\bin\javaw.exe
+Launcher args:	--module-path C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\javafx\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -jar "C:\Users\tienn\Desktop\RMIT\2019\SemC2019\OOP\Asm\CaNguaGameTien\CaNguaGame.exe"
+Args length:	247/32768 chars
+Exit code:	0

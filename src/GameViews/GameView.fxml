@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="gameInterface" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController.GameController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" translateX="-1.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/boardgame.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pointBlue1" fitHeight="25.0" fitWidth="25.0" translateX="40.0" translateY="40.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseBlue1" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFirstBlue" translateX="60.0" translateY="60.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56" surfaceScale="1.73">
+               <bumpInput>
+                  <Shadow color="WHITE" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#1d29d7" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointBlue2" fitHeight="25.0" fitWidth="25.0" translateX="40.0" translateY="80.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseBlue2" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveSecondBlue" translateX="60.0" translateY="100.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#1d29d7" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointBlue3" fitHeight="25.0" fitWidth="25.0" translateX="80.0" translateY="80.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseBlue3" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveThirdBlue" translateX="100.0" translateY="100.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#1d29d7" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointBlue4" fitHeight="25.0" fitWidth="25.0" translateX="80.0" translateY="40.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseBlue4" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFourthBlue" translateX="100.0" translateY="60.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#1d29d7" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointYellow1" fitHeight="25.0" fitWidth="25.0" translateX="40.0" translateY="440.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseYellow1" fitHeight="32.0" fitWidth="34.0" onMousePressed="#moveFirstYellow" translateX="60.0" translateY="460.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ebe12d" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointYellow2" fitHeight="25.0" fitWidth="25.0" translateX="40.0" translateY="480.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseYellow2" fitHeight="32.0" fitWidth="34.0" onMousePressed="#moveSecondYellow" translateX="60.0" translateY="500.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ebe12d" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointYellow3" fitHeight="25.0" fitWidth="25.0" translateX="80.0" translateY="480.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseYellow3" fitHeight="32.0" fitWidth="34.0" onMousePressed="#moveThirdYellow" translateX="100.0" translateY="500.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ebe12d" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointYellow4" fitHeight="25.0" fitWidth="25.0" translateX="80.0" translateY="440.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseYellow4" fitHeight="32.0" fitWidth="34.0" onMousePressed="#moveFourthYellow" translateX="100.0" translateY="460.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#ebe12d" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointGreen1" fitHeight="25.0" fitWidth="25.0" translateX="440.0" translateY="440.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseGreen1" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFirstGreen" translateX="460.0" translateY="460.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#2feb32" />
+               </light>
+            </Lighting>
+         </effect>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </ImageView>
+      <ImageView fx:id="pointGreen2" fitHeight="25.0" fitWidth="25.0" translateX="440.0" translateY="480.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseGreen2" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveSecondGreen" translateX="460.0" translateY="500.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#2feb32" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointGreen3" fitHeight="25.0" fitWidth="25.0" translateX="480.0" translateY="480.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseGreen3" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveThirdGreen" translateX="500.0" translateY="500.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#2feb32" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointGreen4" fitHeight="25.0" fitWidth="25.0" translateX="480.0" translateY="440.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseGreen4" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFourthGreen" translateX="500.0" translateY="460.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#2feb32" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointRed1" fitHeight="25.0" fitWidth="25.0" translateX="440.0" translateY="40.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseRed1" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFirstRed" translateX="460.0" translateY="60.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#c91515" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointRed2" fitHeight="25.0" fitWidth="25.0" translateX="440.0" translateY="75.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseRed2" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveSecondRed" translateX="460.0" translateY="100.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#c91515" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointRed3" fitHeight="25.0" fitWidth="25.0" translateX="480.0" translateY="80.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseRed3" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveThirdRed" translateX="500.0" translateY="100.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#c91515" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pointRed4" fitHeight="25.0" fitWidth="25.0" translateX="480.0" translateY="40.0" visible="false">
+         <image>
+            <Image url="@../GameImages/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="horseRed4" fitHeight="32.0" fitWidth="34.0" onMouseReleased="#moveFourthRed" translateX="500.0" translateY="60.0" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@../GameImages/1.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.28" specularConstant="1.97" specularExponent="12.56">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#c91515" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="602.0" spacing="10.0" style="-fx-background-color: black;" translateY="600.0">
+         <children>
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="131.0" spacing="2.0" translateX="10.0">
+               <children>
+                  <Label fx:id="scoreLabel" alignment="CENTER_RIGHT" layoutX="100.0" prefHeight="17.0" prefWidth="250.0" text="SCORES" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label fx:id="player1Name" prefHeight="17.0" prefWidth="190.0" text="blueName" textFill="#1d29d7" />
+                        <Label fx:id="player1Score" alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="29.0" text="0" textFill="#1d29d7" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label fx:id="player2Name" prefHeight="17.0" prefWidth="179.0" text="yellowName" textFill="#ebe12d" />
+                        <Label fx:id="player2Score" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="29.0" text="0" textFill="#ebe12d" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="score3">
+                     <children>
+                        <Label fx:id="player3Name" prefHeight="17.0" prefWidth="179.0" text="greenName" textFill="#2feb32" />
+                        <Label fx:id="player3Score" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="29.0" text="0" textFill="#2feb32" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="score4">
+                     <children>
+                        <Label fx:id="player4Name" prefHeight="17.0" prefWidth="166.0" text="redName" textFill="#c91515" />
+                        <Label fx:id="player4Score" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="29.0" text="0" textFill="#c91515" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="106.0" prefWidth="111.0" spacing="6.0">
+               <children>
+                  <Label fx:id="diceLabel" alignment="CENTER" layoutX="100.0" prefHeight="30.0" prefWidth="138.0" text="Dices' values" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="114.0">
+                     <children>
+                        <Button fx:id="totalDiceBtn" disable="true" mnemonicParsing="false" onAction="#totalDiceSelected" text="?" />
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="38.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="firstDiceBtn" disable="true" mnemonicParsing="false" onAction="#firstDiceSelected" text="?" />
+                              <Button fx:id="secondDiceBtn" disable="true" mnemonicParsing="false" onAction="#secondDiceSelected" text="?" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="106.0" spacing="25.0">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="54.0" spacing="4.0" style="-fx-border-color: yellow; -fx-border-width: 3; -fx-border-radius: 5;" translateY="15.0">
+                     <children>
+                        <ImageView fx:id="dice1Img" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../GameImages/dice.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="dice2Img" fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../GameImages/dice.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <StackPane>
+                     <children>
+                        <Button fx:id="rollDiceBtn" mnemonicParsing="false" onAction="#rollDice" prefHeight="25.0" prefWidth="105.0" text="Roll" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="172.0" spacing="5.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="171.0">
+                     <children>
+                        <Label fx:id="turnLabel" alignment="CENTER" prefHeight="17.0" prefWidth="171.0" text="Turn of" textFill="WHITE" />
+                        <Label fx:id="playerTurnName" alignment="CENTER" prefHeight="17.0" prefWidth="171.0" text="blueName" textFill="#e17575">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="actionBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="86.0" prefWidth="173.0" spacing="5.0">
+                     <children>
+                        <VBox fx:id="moveBox" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="172.0">
+                           <children>
+                              <Label fx:id="diceUsed" alignment="CENTER" prefHeight="17.0" prefWidth="172.0" text="used dice" textFill="WHITE" />
+                              <Label fx:id="diceUsedValue" alignment="CENTER" prefHeight="17.0" prefWidth="173.0" text="5" textFill="#e17575">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <StackPane>
+                           <children>
+                              <VBox fx:id="capturedBox" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="173.0">
+                                 <children>
+                                    <Label fx:id="capturedLabel" alignment="CENTER" prefHeight="17.0" prefWidth="172.0" text="knocked down horse of" textFill="WHITE" />
+                                    <Label fx:id="capturedHorseLabel" alignment="CENTER" prefHeight="21.0" prefWidth="174.0" text="yellowName" textFill="#e17575">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="upperHomeLabel" alignment="CENTER" prefHeight="17.0" prefWidth="173.0" text="to next home position" textFill="#e17575" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="enterHomeLabel" alignment="CENTER" prefHeight="17.0" prefWidth="173.0" text="enter home" textFill="#e17575" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="leaveNestLabel" alignment="CENTER" prefHeight="21.0" prefWidth="177.0" text="leave nest" textFill="#e17575" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="regularMoveLabel" alignment="CENTER" prefHeight="21.0" prefWidth="177.0" text="move forward" textFill="#e17575" visible="false">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" translateX="550.0" translateY="690.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toEnglish" prefHeight="30.0" prefWidth="30.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../GameImages/7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="toVNBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toVietnamese" prefHeight="30.0" prefWidth="30.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../GameImages/7.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </StackPane>
+      <Button fx:id="soundOnBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#playSound" prefHeight="30.0" prefWidth="30.0" text="GameSound On" translateX="550.0" translateY="610.0" StackPane.alignment="TOP_LEFT">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../GameImages/2.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="soundOffBtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#muteSound" prefHeight="30.0" prefWidth="30.0" text="GameSound Off" translateX="550.0" translateY="610.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../GameImages/3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#quitGame" prefHeight="30.0" prefWidth="30.0" text="Quit" translateX="550.0" translateY="650.0" visible="true">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../GameImages/5.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <StackPane fx:id="setUpInterface" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="745.0" prefWidth="600.0" StackPane.alignment="TOP_LEFT">
+          <children>
+              <ImageView fitHeight="750.0" fitWidth="750.0" translateX="-75.0">
+                  <image>
+                      <Image url="@../GameImages/boardgame.png" />
+                  </image>
+                  <effect>
+                      <Lighting diffuseConstant="0.19" specularExponent="30.23">
+                          <bumpInput>
+                              <Shadow />
+                          </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <VBox fx:id="setUp2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="464.0" translateX="70.0" translateY="150.0" visible="false">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="463.0">
+                           <children>
+                              <Label fx:id="nameLabel" prefHeight="25.0" prefWidth="164.0" text="Name" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="colorLabel" prefHeight="25.0" prefWidth="162.0" text="Color" textFill="WHITE">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="setUp2Notice" alignment="BOTTOM_LEFT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="377.0" text="A name has to be unique and has maximum 10 characters" textFill="WHITE" translateX="100.0">
+                           <font>
+                              <Font name="System Italic" size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="464.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="name1" prefHeight="25.0" prefWidth="144.0" text="Computer 1">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="95.0" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="blue1Btn" mnemonicParsing="false" onAction="#selectAColorBlue">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#2900ff" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="player1" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="yellow1Btn" mnemonicParsing="false" onAction="#selectAColorYellow" toggleGroup="$player1">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#ffe800" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="green1Btn" mnemonicParsing="false" onAction="#selectAColorGreen" toggleGroup="$player1">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#07ff00" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="red1Btn" mnemonicParsing="false" onAction="#selectAColorRed" toggleGroup="$player1">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="RED" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="464.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="name2" prefHeight="25.0" prefWidth="144.0" text="Computer 2">
+                        <font>
+                           <Font name="System Italic" size="12.0" />
+                        </font></TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="blue2Btn" mnemonicParsing="false" onAction="#selectAColorBlue">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#2900ff" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="player2" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="yellow2Btn" mnemonicParsing="false" onAction="#selectAColorYellow" toggleGroup="$player2">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#ffe800" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="green2Btn" mnemonicParsing="false" onAction="#selectAColorGreen" toggleGroup="$player2">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#07ff00" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="red2Btn" mnemonicParsing="false" onAction="#selectAColorRed" toggleGroup="$player2">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="RED" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="player3Color" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="465.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="name3" prefHeight="25.0" prefWidth="144.0" text="Computer 3">
+                        <font>
+                           <Font name="System Italic" size="12.0" />
+                        </font></TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="blue3Btn" mnemonicParsing="false" onAction="#selectAColorBlue">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#2900ff" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="player3" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="yellow3Btn" mnemonicParsing="false" onAction="#selectAColorYellow" toggleGroup="$player3">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#ffe800" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="green3Btn" mnemonicParsing="false" onAction="#selectAColorGreen" toggleGroup="$player3">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#07ff00" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="red3Btn" mnemonicParsing="false" onAction="#selectAColorRed" toggleGroup="$player3">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="RED" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="player4Color" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="464.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="name4" prefHeight="25.0" prefWidth="144.0" text="Computer 4">
+                        <font>
+                           <Font name="System Italic" size="12.0" />
+                        </font></TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+                           <children>
+                              <RadioButton fx:id="blue4Btn" mnemonicParsing="false" onAction="#selectAColorBlue">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#2900ff" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="player4" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="yellow4Btn" mnemonicParsing="false" onAction="#selectAColorYellow" toggleGroup="$player4">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#ffe800" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="green4Btn" mnemonicParsing="false" onAction="#selectAColorGreen" toggleGroup="$player4">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="#07ff00" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                              <RadioButton fx:id="red4Btn" mnemonicParsing="false" onAction="#selectAColorRed" toggleGroup="$player4">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow color="TRANSPARENT" height="130.47" radius="64.735" width="130.47" />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant azimuth="79.53" color="RED" elevation="86.86" />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="setUp2AlertMessage" alignment="CENTER" prefHeight="20.0" prefWidth="454.0" text="You have to select all players' colors to contiue" textFill="#fffefe" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../GameImages/4.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="464.0" spacing="300.0">
+                     <children>
+                        <Button fx:id="a1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toSetUp1" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/6.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startGame" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <ColorAdjust brightness="-0.02" />
+               </effect>
+            </VBox>
+            <VBox fx:id="setUp1" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="425.0" spacing="10.0" translateX="100.0" translateY="200.0">
+               <children>
+                  <Label fx:id="setUp1Notice" alignment="CENTER" prefHeight="17.0" prefWidth="424.0" text="Total number of players has to be between 2 and 4" textFill="#fffefe">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="307.0">
+                     <children>
+                        <Slider fx:id="humanPlayers" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="0" prefHeight="18.0" prefWidth="144.0" showTickMarks="true" snapToTicks="true" value="1.0" />
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="307.0" spacing="30.0">
+                           <children>
+                              <Label fx:id="humanLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="133.0" text="Human players" textFill="#236aa4" />
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="145.0" spacing="25.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="0.0" text="0" textFill="#236aa4" />
+                                    <Label prefHeight="18.0" prefWidth="0.0" text="1" textFill="#236aa4" />
+                                    <Label prefHeight="17.0" prefWidth="10.0" text="2" textFill="#236aa4" />
+                                    <Label prefHeight="17.0" prefWidth="2.0" text="3" textFill="#236aa4" />
+                                    <Label prefHeight="18.0" prefWidth="0.0" text="4" textFill="#236aa4" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="308.0">
+                     <children>
+                        <Slider fx:id="machinePlayers" blockIncrement="1.0" majorTickUnit="1.0" max="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" minorTickCount="0" prefHeight="18.0" prefWidth="144.0" showTickMarks="true" snapToTicks="true" value="1.0" />
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="309.0" spacing="30.0">
+                           <children>
+                              <Label fx:id="machineLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="138.0" text="Machine players" textFill="#236aa4" />
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="143.0" spacing="25.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="0.0" text="0" textFill="#236aa4" />
+                                    <Label prefHeight="18.0" prefWidth="0.0" text="1" textFill="#236aa4" />
+                                    <Label prefHeight="17.0" prefWidth="10.0" text="2" textFill="#236aa4" />
+                                    <Label prefHeight="17.0" prefWidth="2.0" text="3" textFill="#236aa4" />
+                                    <Label prefHeight="18.0" prefWidth="0.0" text="4" textFill="#236aa4" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="272.0" spacing="30.0">
+                     <children>
+                        <Label fx:id="languageLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="136.0" text="Language" textFill="#236aa4" />
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="vietnameseLanguageBox" onAction="#toEnglish" prefHeight="25.0" prefWidth="106.0" value="Tiếng Việt">
+                              <items>
+                                 <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Tiếng Anh" />
+                                    <String fx:value="Tiếng Việt" />
+                                 </FXCollections>
+                              </items>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="englishLanguageBox" onAction="#toVietnamese" prefHeight="25.0" prefWidth="106.0" value="English">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="English" />
+                                       <String fx:value="Vietnamese" />
+                                    </FXCollections>
+                                 </items>
+                              </ChoiceBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="361.0" spacing="300.0">
+                     <children>
+                        <Button fx:id="a2" alignment="CENTER" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/6.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toSetUp2" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <ColorAdjust brightness="-0.02" />
+               </effect>
+            </VBox>
+         </children>
+      </StackPane>
+       <StackPane fx:id="endGamePane" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="600.0" visible="false">
+           <children>
+               <ImageView fx:id="quitGameImg1" fitHeight="750.0" fitWidth="750.0" translateX="-75.0">
+                   <image>
+                       <Image url="@../GameImages/boardgame.png" />
+                   </image>
+                   <effect>
+                       <Lighting diffuseConstant="0.42">
+                           <bumpInput>
+                               <Shadow />
+                           </bumpInput>
+                           <light>
+                               <Light.Distant color="#615e5e" />
+                           </light>
+                       </Lighting>
+                   </effect>
+               </ImageView>
+               <VBox alignment="CENTER" spacing="50.0">
+                   <children>
+                  <VBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label fx:id="congratulationNoti" alignment="CENTER" prefHeight="27.0" prefWidth="597.0" text="Congratulation to" textFill="#236aa4">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="15.0" prefWidth="600.0" spacing="10.0">
+                           <children>
+                                   <Label fx:id="completePlayer" alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="231.0" text="ABC" textFill="#dac824">
+                                       <font>
+                                           <Font size="22.0" />
+                                       </font>
+                                   </Label>
+                              <Label fx:id="completePlayerNoti" prefHeight="56.0" prefWidth="321.0" text="has completed the game " textFill="#dac824">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="43.0" prefWidth="600.0">
+                           <children>
+                                   <Label fx:id="highestScorePlayer" alignment="CENTER" prefHeight="0.0" prefWidth="600.0" text="DEF" textFill="#dac824">
+                                       <font>
+                                           <Font size="22.0" />
+                                       </font>
+                                   </Label>
+                              <Label fx:id="highestScoreNoti" alignment="CENTER" prefHeight="28.0" prefWidth="600.0" text="with the highest score" textFill="#dac824">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                       <VBox alignment="CENTER" spacing="15.0">
+                           <children>
+                               <Button fx:id="playAgainBtn" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#playAgain" prefHeight="28.0" prefWidth="109.0" text="Play again" visible="true" />
+                               <Button fx:id="quitGameBtn1" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#confirmQuitGame" prefHeight="28.0" prefWidth="109.0" text="Quit" visible="true" />
+                           </children>
+                       </VBox>
+                   </children>
+               </VBox>
+           </children>
+       </StackPane>
+      <StackPane fx:id="playAgainPane" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="600.0" visible="false">
+         <children>
+            <ImageView fx:id="quitGameImg11" fitHeight="750.0" fitWidth="750.0" translateX="-75.0">
+               <image>
+                  <Image url="@../GameImages/boardgame.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.42">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#615e5e" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <VBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="restartBtn" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#restartGame" prefHeight="28.0" prefWidth="109.0" text="Restart Game" visible="true" />
+                  <Button fx:id="newGameBtn" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#newGame" prefHeight="28.0" prefWidth="109.0" text="New Game" visible="true" />
+                  <HBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="361.0" spacing="300.0">
+                     <children>
+                        <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toEndGame" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/6.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../GameImages/1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <StackPane fx:id="confirmQuitBox" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="600.0" visible="false" StackPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fx:id="quitGameImg" fitHeight="750.0" fitWidth="750.0" translateX="-75.0">
+               <image>
+                  <Image url="@../GameImages/boardgame.png" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.42">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#615e5e" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label fx:id="confirmQuitMessage" alignment="CENTER" prefHeight="67.0" prefWidth="325.0" text="Current result wont be saved" textFill="#fffefe">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../GameImages/4.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                   <VBox alignment="CENTER" spacing="15.0">
+                       <children>
+                           <Button fx:id="continueBtn" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#continueGame" prefHeight="28.0" prefWidth="96.0" text="Continue" visible="true" />
+                           <Button fx:id="quitGameBtn" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#quitGame" prefHeight="28.0" prefWidth="94.0" text="Quit" visible="true" />
+                       </children>
+                   </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>
